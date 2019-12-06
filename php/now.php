@@ -1,5 +1,5 @@
 <?php
-// http://localhost/wechat/xiaochengxu/t1/php/now.php
+// http://localhost/wechat/xiaochengxu/weather_test/php/now.php
 error_reporting(0);
 header('Content-Type:text/plain;charset=utf8;');
 

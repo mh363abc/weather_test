@@ -16,8 +16,8 @@
 ### 问题说明
 * 如果本地请求不能成功，参考：doc\配置本地localhost的请求.txt
 * 不是代码拿下去放着就能成功的，需要调试里面的链接。
-* 比如需要配置本地的：http://localhost/wechat/xiaochengxu/t1/php/lifestyle.php
-* 比如需要配置本地的：http://localhost/wechat/xiaochengxu/t1/php/now.php
+* 比如需要配置本地的：http://localhost/wechat/xiaochengxu/weather_test/php/lifestyle.php
+* 比如需要配置本地的：http://localhost/wechat/xiaochengxu/weather_test/php/now.php
 * 需要【和风天气】注册，获取一个api-key值，替换对应位置
 * 当前时间：2019-12-05。不同时间接口数据不同，就可能需要修改
 

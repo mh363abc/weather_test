@@ -8,8 +8,8 @@ Page({
   data:{
     //设置页面数据，后面空值将在页面显示时通过请求服务器获取
     cur_id:app.curid,basic:"",now:"",suggestion:"",
-    url_now:'http://127.0.0.1/wechat/xiaochengxu/t1/php/now.php', // 天气接口。提交到本地，本地curl到服务器获取返回
-    url_lifestyle:'http://127.0.0.1/wechat/xiaochengxu/t1/php/lifestyle.php', // 生活指数。提交到本地，本地curl到服务器获取返回
+    url_now:'http://127.0.0.1/wechat/xiaochengxu/weather_test/php/now.php', // 天气接口。提交到本地，本地curl到服务器获取返回
+    url_lifestyle:'http://127.0.0.1/wechat/xiaochengxu/weather_test/php/lifestyle.php', // 生活指数。提交到本地，本地curl到服务器获取返回
     // 两个接口：对应的服务器是 "和风天气"提供的
     api_key : 'cb5acaf12eb94aec8a0595459419cd58' // 和风天气[api-key]
   },
@@ -55,7 +55,16 @@ Page({
         //成功后将数据传给回调函数执行
         // console.log('获取天气：weather.js-getnow-success:');
         // console.log(res);
+        if(200!=res.statusCode){
+          console.log('getnow-请求范围结果未定义');
+          console.log(res);
+          return;
+        }
         fn(res.data.HeWeather6[0]);
+      },
+      fail : function(res){
+        console.log('获取天气信息失败！');
+        console.log(res);
       }
     })
   },
@@ -70,7 +79,16 @@ Page({
       success: function(res) {
         // console.log('获取生活指数：weather.js-getsuggestion-success:');
         // console.log(res);
+        if (200 != res.statusCode) {
+          console.log('getsuggestion-请求范围结果未定义');
+          console.log(res);
+          return;
+        }
         fn(res.data.HeWeather6[0]);
+      },
+      fail: function (res) {
+        console.log('获取生活指数信息失败！');
+        console.log(res);
       }
     })
   },
