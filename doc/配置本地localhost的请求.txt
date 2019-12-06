@@ -1,0 +1,61 @@
+============================================================
+mdl
+============================================================
+============================================================
+// 部分代码
+onLoad: function (options) {
+    console.log('测试本地请求');
+    wx.request({//请求服务器，类似ajax
+      // url: 'http://127.0.0.1/wechat/xiaochengxu/t1/php/lifestyle.php', 
+      url: 'http://localhost/wechat/xiaochengxu/t1/php/lifestyle.php', 
+      data: {location:'',key:''},
+      header: {'Content-Type': 'application/json'},
+      success: function(res) {
+        //成功后将数据传给回调函数执行
+        console.log('获取ajax返回结果：');
+        console.log(res);
+      }
+    });
+},
+============================================================
+问题：不能得到结果？
+解决：编写代码的工具=》【微信开发者工具】=》【设置】=》【项目设置】=》右侧【本地设置】=》勾选【不检验合法域名...HTTPS证书】。重新尝试下。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
